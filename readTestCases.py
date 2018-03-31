@@ -6,8 +6,9 @@ def readTrainingFile(filepath):
         csvreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in csvreader:
             fieldnames.append(row[0])
+    print(fieldnames)
 
-    with open('SmallTrainingSet.csv', newline='') as csvfile:
+    with open(filepath, newline='') as csvfile:
         trainingSetReader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in trainingSetReader:
             print(row)
